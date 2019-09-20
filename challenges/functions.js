@@ -18,20 +18,28 @@ function consume(a, b, cb) {
 function add(a, b) {
   return a + b
 }
-console.log(consume(8, 2, add));
+function multiply(a, b) {
+  return a * b
+}
+
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`
+}
+
+
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: This is because of a rule in javascript called hoisting, where a function can access variables and functions that are declared above it. However it cannot access vaiables declared below it, within its child.
 
 
 const external = "I'm outside the function";
